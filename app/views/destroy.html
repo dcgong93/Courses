@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Delete a course</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Are you sure you want to delete this course?</h1>
+      </div>
+        <p>Name: {{courses['course_name']}}</p>
+        <p>Description: {{courses['course_description']}}</p>
+
+      <div class="row">
+        <div class="col-md-8">
+          <form action="confirm_destroy/{{courses.id}}" method='post'>
+            <input type="submit" name="action" value="no" />
+            <input type="submit" name="action" value="Yes!" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
