@@ -6,7 +6,7 @@ class Course(Model):
         super(Course, self).__init__()
 
     def add_course(self, courses):
-        query = "INSERT INTO courses (course_name, course_description, created_at) VALUES(:course_name, :course_description, NOW())"
+        query = "INSERT INTO courses (course_name, description, created_at) VALUES(:course_name, :course_description, NOW())"
         data = {
             'course_name':courses['course_name'],
             'course_description':courses['course_description']
